@@ -27,6 +27,8 @@ form.addEventListener('submit', (event) => {
             color: 'yellow',
             position: 'topRight',
         })
+        hideLoader();
+        clearGallery();
         return;
     }
 
