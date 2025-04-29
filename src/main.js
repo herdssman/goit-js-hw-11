@@ -17,7 +17,6 @@ function hideLoader() {
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
-    showLoader();
 
     const query = input.value.trim();
 
@@ -27,10 +26,11 @@ form.addEventListener('submit', (event) => {
             color: 'yellow',
             position: 'topRight',
         })
-        hideLoader();
         clearGallery();
         return;
     }
+
+    showLoader();
 
     getImagesByQuery(query)
         .then((data) => {
